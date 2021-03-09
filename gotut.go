@@ -37,7 +37,6 @@ func newsAggHandler(w http.ResponseWriter, r *http.Request) {
 	var s Sitemapindex
 	var n News
 	resp, _ := ioutil.ReadFile("./news-sitemap-index.xml")
-	// bytes, _ := ioutil.ReadAll(resp.Body)
 	xml.Unmarshal(resp, &s)
 	news_map := make(map[string]NewsMap)
 
